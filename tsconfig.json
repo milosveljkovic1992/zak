@@ -21,7 +21,7 @@
     "declaration": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
-    "baseUrl": "./src",
+    "baseUrl": "src",
     "types": ["jest", "node"]
   },
   "include": ["src"],

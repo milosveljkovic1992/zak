@@ -44,11 +44,11 @@ Builds the app for production to the `build` folder using .env.production variab
 
 ### `npm run check-format`
 
-Runs `prettier --check` script and checks all files that are not included in .prettierignore if the code is formatted according to styles set in .prettierrc.json.
+Runs `prettier --check .` script and checks all files that are not included in .prettierignore if the code is formatted according to styles set in .prettierrc.json.
 
 ### `npm run check-lint`
 
-Runs the eslint check to see if code adheres to rules set in .eslintrc.json.
+Runs the ESLint check to see if code adheres to rules set in .eslintrc.json.
 
 ### `npm run check-types`
 
@@ -57,7 +57,7 @@ This will only perform type checking and report errors without generating (creat
 
 ### `npm run format`
 
-Runs `prettier --write` script and applies the code formatting styles set in .prettierrc.json to all files that are not included in .prettierignore.
+Runs `prettier --write .` script and applies the code formatting styles set in .prettierrc.json to all files that are not included in .prettierignore.
 
 ### `npm run eject`
 
@@ -73,7 +73,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ### pre-commit
 
-Runs the following scripts:
+Runs the following scripts:\
 `npm run check-format`  
 `npm run check-lint`  
 `npm run check-types`  

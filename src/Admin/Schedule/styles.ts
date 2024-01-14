@@ -8,7 +8,7 @@ export const SSchedule = {
     align-items: center;
     justify-content: center;
   `,
-  Card: styled(Card)`
+  Inner: styled(Card)`
     width: 90%;
     max-width: 768px;
     box-shadow: 0px 5px 15px 2px rgba(0, 0, 0, 0.1);

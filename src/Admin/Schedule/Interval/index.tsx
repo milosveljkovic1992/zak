@@ -1,14 +1,15 @@
 import React from 'react';
 
 import { SInterval } from './styles';
+import { TInterval } from './types';
 
-type TInterval = {
-  interval: string;
+type TIntervalProps = {
+  interval: TInterval;
 };
 
-export const Interval = ({ interval }: TInterval) => (
+export const Interval = ({ interval }: TIntervalProps) => (
   <SInterval.Block>
-    <span>{interval}</span>
+    <span>{interval.time}</span>
   </SInterval.Block>
 );
 

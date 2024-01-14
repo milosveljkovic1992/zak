@@ -4,10 +4,12 @@ import { Interval } from 'Admin/Schedule/Interval';
 import { SInterval } from 'Admin/Schedule/Interval/styles';
 import { generate } from 'utils';
 
+import { TInterval } from './Interval/types';
+import { Request } from './Request';
 import { SSchedule } from './styles';
 
-const Schedule = () => {
-  const [intervals, setIntervals] = useState<Array<string>>([]);
+export const Schedule = () => {
+  const [intervals, setIntervals] = useState<Array<TInterval>>([]);
 
   const handleGenerateIntervals = () => {
     const from = new Date();
@@ -20,13 +22,15 @@ const Schedule = () => {
   return (
     <SSchedule.Container>
       <SSchedule.Inner>
-        <p>request 1</p>
+        {Array.from({ length: 3 }, (_, index) => index + 1).map((item) => (
+          <Request key={item} label={item} />
+        ))}
         <p>request 2</p>
         <p>request 3</p>
         <h1>Schedule</h1>
         <button onClick={handleGenerateIntervals}>Generate</button>
         <SInterval.Container>
-          {!!intervals.length && intervals.map((interval) => <Interval interval={interval} />)}
+          {!!intervals.length && intervals.map((interval) => <Interval key={interval.key} interval={interval} />)}
         </SInterval.Container>
       </SSchedule.Inner>
     </SSchedule.Container>

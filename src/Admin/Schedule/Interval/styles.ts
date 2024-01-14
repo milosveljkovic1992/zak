@@ -15,5 +15,6 @@ export const SInterval = {
     display: grid;
     place-items: center;
     cursor: pointer;
+    user-select: none;
   `,
 };
